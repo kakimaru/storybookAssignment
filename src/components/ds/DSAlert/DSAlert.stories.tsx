@@ -4,6 +4,7 @@ import DSAlert, { colors } from "./DSAlert";
 const meta = {
   component: DSAlert,
   args: {
+    colors: "primary",
     title: "Alert title",
     description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. At officiis, quae tempore necessitatibus placeat saepe."
   },
@@ -19,10 +20,32 @@ export default meta;
 
 type Story = StoryObj<typeof DSAlert>;
 
-const alert = {} satisfies Story;
+const Default = {
+  args: {
+    colors: "primary",
+    title: "Alert title",
+    description: "This is a default alert."
+  },
+} satisfies Story;
+
+const Warning = {
+  args: {
+    colors: "warning",
+    title: "Alert title",
+    description: "This is a warning alert."
+  },
+} satisfies Story;
+
+const Danger = {
+  args: {
+    colors: "danger",
+    title: "Alert title",
+    description: "This is a danger alert."
+  },
+} satisfies Story;
 
 
 
 
 
-export { alert };
+export { Default, Warning, Danger };

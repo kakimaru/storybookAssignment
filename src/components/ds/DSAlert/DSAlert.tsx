@@ -7,7 +7,7 @@ type Colors = (typeof colors)[number];
 
 export type Props = {
   colors?: Colors;
-  title?: string;
+  title: string;
   description: string;
 };
 
